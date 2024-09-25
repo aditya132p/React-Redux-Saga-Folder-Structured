@@ -1,9 +1,12 @@
+
 # React-Redux-Saga-Folder-Structured
 A well-structured React boilerplate with Redux and Redux Saga for state management and side effects handling.
+
 
 ## Folder Structure
 
 The folder structure is designed to separate concerns and promote reusability. Below is an overview of each folder and its purpose:
+
 
 ### `src/`
 
@@ -60,6 +63,7 @@ The folder structure is designed to separate concerns and promote reusability. B
   - Example:
     - `axiosInstance.js`: Custom Axios instance with interceptors for request and response handling.
 
+
 ## Redux and Redux Saga
 
 This application uses **Redux** for state management and **Redux Saga** for handling side effects, such as asynchronous data fetching.
@@ -72,6 +76,7 @@ This application uses **Redux** for state management and **Redux Saga** for hand
   - A middleware library that aims to make side effects (e.g., data fetching, API calls) easier to manage.
   - It uses generator functions to handle asynchronous flows more elegantly.
   - You can define sagas to watch for specific actions and execute corresponding side effects.
+
     
 ### Store Configuration
 
@@ -82,15 +87,18 @@ The store is set up with Redux and Redux Saga, including the following key files
 - **`rootSaga.js`**: Combines all sagas into a single root saga, using the `all` and `fork` effects to run sagas concurrently.
 - **`rootActions.js`**: Contains action types and action creators that can be used across the application for dispatching actions related to fetching products and handling responses.
 
+
 ### Usage of Redux Saga
 
 1. **Create Saga Watchers**: Define watcher sagas that listen for specific actions and trigger worker sagas.
 2. **Worker Sagas**: These perform the actual side effects, like making API calls.
 3. **Dispatch Actions**: Use action creators from `rootActions.js` to dispatch actions in your components or sagas.
 
+
 ### Example Usage
 
 To fetch products, you would dispatch `fetchProductsRequest()` from a component, which would trigger the corresponding saga to handle the API request and update the Redux store with the results.
+
 
 ### Usage
 
@@ -100,23 +108,26 @@ To fetch products, you would dispatch `fetchProductsRequest()` from a component,
    - Use the `PublicRoute` component for routes that should be accessible to everyone.
    - Use the `PrivateRoute` component for routes that require authentication.
 
+
 ### Getting Started
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/my-react-app.git
-   cd my-react-app
+   ```shell
+   git clone https://github.com/aditya132p/React-Redux-Saga-Folder-Structured.git
+   cd React-Redux-Saga-Folder-Structured
+
    ```
 
 2. **Install dependencies**:
-```bash
-npm install
-```
+   ```shell
+   npm install
+   ```
 
 2. **Install dependencies**:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
+
 
 ### Features
 - Routing: Public and private routes for user authentication.
@@ -127,6 +138,7 @@ npm run dev
 
 ### Contributing
 Feel free to create a pull request for any enhancements or bug fixes.
+
 
 ### Key Points Added:
 
